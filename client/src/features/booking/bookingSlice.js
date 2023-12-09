@@ -27,7 +27,8 @@ const initialState = {
     bookingDay: "",
     bookingId:"",
     pref:"",
-    bookingTitle:""
+    bookingTitle:"",
+    pricing:{}
 }
 
 
@@ -37,147 +38,115 @@ const bookingSlice = createSlice({
     reducers:{
         adultCountIncrease : (state, action) => {
             state.adultCount = state.adultCount + 1
-            // setBookingDetailsFromLocalStorage(state)
         },
         adultCountDecrease : (state, action) => {
             state.adultCount = state.adultCount - 1
-            // setBookingDetailsFromLocalStorage(state)
         },
 
 
         generalCountIncrease : (state, action) => {
             state.generalCount = state.generalCount + 1
-            // setBookingDetailsFromLocalStorage(state)
         },
         generalCountDecrease : (state, action) => {
             state.generalCount = state.generalCount - 1
-            // setBookingDetailsFromLocalStorage(state)
         },
         childCountIncrease : (state, action) => {
             state.childCount = state.childCount + 1
-            // setBookingDetailsFromLocalStorage(state)
         },
         childCountDecrease : (state, action) => {
             state.childCount = state.childCount - 1
-            // setBookingDetailsFromLocalStorage(state)
         },
         infantCountIncrease : (state, action) => {
             state.infantCount = state.infantCount + 1
-            // setBookingDetailsFromLocalStorage(state)
         },
         infantCountDecrease : (state, action) => {
             state.infantCount = state.infantCount - 1
-            // setBookingDetailsFromLocalStorage(state)
         },
         seniorCountIncrease : (state, action) => {
             state.seniorCount = state.seniorCount + 1
-            // setBookingDetailsFromLocalStorage(state)
         },
         seniorCountDecrease : (state, action) => {
             state.seniorCount = state.seniorCount - 1
-            // setBookingDetailsFromLocalStorage(state)
         },
 
         generalTotalAmount: (state) => {
             state.generalTotal = state.generalCount * 75
-            // setBookingDetailsFromLocalStorage(state)
         },
         adultTotalAmount: (state) => {
+            // 
             //First
             if(state.type === 'bookTypeOne'){
-                if(state.pref === "1-Day Pass") {
-                    state.adultTotal = state.adultCount *  151
-                   return 
-                } else if(state.pref === "Combo: 1-Day Pass + Two-Way Standard Gondola Ride"
+                if(state.pref === "Malaysian Citizens") {
+                    if(state.bookingDay === 'Sun' || state.bookingDay === 'Sat' || state.bookingDay === 'Fri') {
+                        state.adultTotal = state.adultCount *  state.pricing.malaysian.weekends.adult
+                        return 
+                    }else{
+                        state.adultTotal = state.adultCount *  state.pricing.malaysian.weekdays.adult
+                        return 
+
+                    }
+                } else if(state.pref === "Non Malaysian Citizens"
                 ){
-                    state.adultTotal = state.adultCount *  171
-                   return
-                } else if(state.pref === "1-Day Pass with Photo"){
-                    state.adultTotal = state.adultCount *  179
-                   return 
-                } else if(state.pref === "Combo: Genting SkyWorlds Theme Park + Skytropolis Indoor Theme Park Tickets"
-                ) {
-                    state.adultTotal = state.adultCount *  215
-                   return 
-                } //Third
-            } else if(state.type === 'bookTypeThree'){
-                state.adultTotal = state.adultCount *  215
-                return 
-            } else if(state.type === 'bookTypeFour'){
-                //Fourth
-                state.adultTotal = state.adultCount *  166
-                return
-            } else if(state.type === 'bookTypeFive'){
-                //Fifth
-                state.adultTotal = state.adultCount *  225
-                return
-            }
-            // setBookingDetailsFromLocalStorage(state)
+                    if(state.bookingDay === 'Sun' || state.bookingDay === 'Sat' || state.bookingDay === 'Fri') {
+                        state.adultTotal = state.adultCount *  state.pricing.nonMalaysian.weekends.adult
+                        return 
+                    }else{
+                        state.adultTotal = state.adultCount *  state.pricing.nonMalaysian.weekdays.adult
+                        return 
+
+                    } 
+                }
+            } 
         },
         childTotalAmount: (state) => {
             //First
             if(state.type === 'bookTypeOne'){
-                if(state.pref === "1-Day Pass") {
-                    state.childTotal = state.childCount *  128
-                   return 
-                } else if(state.pref === "Combo: 1-Day Pass + Two-Way Standard Gondola Ride"
-                ){
-                    state.childTotal = state.childCount *  148
-                   return
-                } else if(state.pref === "1-Day Pass with Photo"){
-                    state.childTotal = state.childCount *  153
-                   return 
-                } else if(state.pref === "Combo: Genting SkyWorlds Theme Park + Skytropolis Indoor Theme Park Tickets"
-                ) {
-                    state.childTotal = state.childCount *  190
-                   return 
-                } //Third 
-            }  else if(state.type === 'bookTypeThree'){
-                state.childTotal = state.childCount *  190
-                return 
-            } else if(state.type === 'bookTypeFour'){
-                //Fourth
-                state.childTotal = state.childCount *  136
-                return
-            } else if(state.type === 'bookTypeFive'){
-                //Fifth
-                state.childTotal = state.childCount *  200
-                return
-            }
+                if(state.pref === "Malaysian Citizens") {
+                    if(state.bookingDay === 'Sun' || state.bookingDay === 'Sat' || state.bookingDay === 'Fri') {
+                        state.childTotal = state.childCount *  state.pricing.malaysian.weekends.child
+                        return 
+                    }else{
+                        state.childTotal = state.childCount *  state.pricing.malaysian.weekdays.child
+                        return 
 
-            // setBookingDetailsFromLocalStorage(state)
+                    }
+                } else if(state.pref === "Non Malaysian Citizens"
+                ){
+                    if(state.bookingDay === 'Sun' || state.bookingDay === 'Sat' || state.bookingDay === 'Fri') {
+                        state.childTotal = state.childCount *  state.pricing.nonMalaysian.weekends.child
+                        return 
+                    }else{
+                        state.childTotal = state.childCount *  state.pricing.nonMalaysian.weekdays.child
+                        return 
+
+                    } 
+                }
+            } 
         },
         seniorTotalAmount: (state) => {
             //First
             if(state.type === 'bookTypeOne'){
-                if(state.pref === "1-Day Pass") {
-                    state.seniorTotal =  state.seniorCount *  128
-                   return 
-                } else if(state.pref === "Combo: 1-Day Pass + Two-Way Standard Gondola Ride"
+                if(state.pref === "Malaysian Citizens") {
+                    if(state.bookingDay === 'Sun' || state.bookingDay === 'Sat' || state.bookingDay === 'Fri') {
+                        state.seniorTotal = state.seniorCount *  state.pricing.malaysian.weekends.senior
+                        return 
+                    }else{
+                        state.seniorTotal = state.seniorCount *  state.pricing.malaysian.weekdays.senior
+                        return 
+
+                    }
+                } else if(state.pref === "Non Malaysian Citizens"
                 ){
-                    state.seniorTotal =  state.seniorCount *  148
-                   return
-                } else if(state.pref === "1-Day Pass with Photo"){
-                    state.seniorTotal =  state.seniorCount *  153
-                   return 
-                } else if(state.pref === "Combo: Genting SkyWorlds Theme Park + Skytropolis Indoor Theme Park Tickets"
-                ) {
-                    state.seniorTotal =  state.seniorCount *  190
-                   return 
-                } //Third 
-            } else if(state.type === 'bookTypeThree'){
-                state.seniorTotal = state.seniorCount *  190
-                return 
-            } else if(state.type === 'bookTypeFour'){
-                //Fourth
-                state.seniorTotal = state.seniorCount *  136
-                return
-            } else if(state.type === 'bookTypeFive'){
-                //Fifth
-                state.seniorTotal = state.seniorCount *  200
-                return
-            }
-            // setBookingDetailsFromLocalStorage(state)
+                    if(state.bookingDay === 'Sun' || state.bookingDay === 'Sat' || state.bookingDay === 'Fri') {
+                        state.seniorTotal = state.seniorCount *  state.pricing.nonMalaysian.weekends.senior
+                        return 
+                    }else{
+                        state.seniorTotal = state.seniorCount *  state.pricing.nonMalaysian.weekdays.senior
+                        return 
+
+                    } 
+                }
+            } 
         },
 
         setPreference: (state, action) => {
@@ -233,6 +202,7 @@ const bookingSlice = createSlice({
         choosingBooking: (state, action) => {
             state.type = action.payload.type
             state.bookingTitle = action.payload.title
+            state.pricing = action.payload.pricing
             // setBookingDetailsFromLocalStorage(state)
         },
         settingBookingResponse: (state, action) => {

@@ -90,16 +90,7 @@ const BookingDateConfirmation = () => {
         const [calenderOpen, setCalenderOpen] = useState(false)
 
         const disabledDays = [
-            new Date(2023,10,28),
-            new Date(2023, 11, 5),
-            new Date(2023, 11, 12),
-            new Date(2023, 11, 19),
-            new Date(2023, 11, 26),
-            new Date(2023, 12, 2),
-            new Date(2023, 12, 9),
-            new Date(2023, 12, 16),
-            new Date(2023, 12, 23),
-            new Date(2023, 12, 30),
+            
           ];
 
         if(!type){
@@ -141,11 +132,7 @@ const BookingDateConfirmation = () => {
                     selectedDate ? <>
                     <div className='prefrenceAndDateContainer'>
                         <p>{
-                            type === 'bookTypeOne' && pref ? pref : 
-                            type === 'bookTypeTwo' ? "Combo: Genting Awana SkyWay (One-way) + Skytropolis Indoor Theme Park Tickets" : 
-                            type === 'bookTypeThree' ? "Combo : Genting SkyWorlds Theme Park + Skytropolis Indoor Theme Park Tickets" : 
-                            type === 'bookTypeFour' ? "Combo: Genting Awana SkyWay (One-way) + Skyworld Outdoor Theme Park Tickets" : 
-                            type === 'bookTypeFive' && "Combo: Genting Awana Skyway (One-way) + Skyworld Outdoor + Skytropolis Indoor Theme Park"
+                            type === 'bookTypeOne' && pref 
                         }</p>
                     <p>You selected {format(selectedDate, 'PPP')}.</p>
                     </div>

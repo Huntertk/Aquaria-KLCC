@@ -1,50 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
 
-//First
-
-import outdoorThemeParkImgOne from './assets/images/outdoorThemeParkImgOne.avif'
-import outdoorThemeParkImgTwo from './assets/images/outdoorThemeParkImgTwo.avif'
-import outdoorThemeParkImgThree from './assets/images/outdoorThemeParkImgThree.avif'
-import outdoorThemeParkImgFour from './assets/images/outdoorThemeParkImgFour.avif'
-import outdoorThemeParkImgFive from './assets/images/outdoorThemeParkImgFive.avif'
-import outdoorThemeParkImgSix from './assets/images/outdoorThemeParkImgSix.avif'
-import outdoorThemeParkImgSeven from './assets/images/outdoorThemeParkImgSeven.avif'
-
-//Second
-import gentingAwanaskyWayImgOne from './assets/images/gentingAwanaskyWayImgOne.avif'
-import gentingAwanaskyWayImgTwo from './assets/images/gentingAwanaskyWayImgTwo.avif'
-import gentingAwanaskyWayImgThree from './assets/images/gentingAwanaskyWayImgThree.avif'
-import gentingAwanaskyWayImgFour from './assets/images/gentingAwanaskyWayImgFour.avif'
-import gentingAwanaskyWayImgFive from './assets/images/gentingAwanaskyWayImgFive.avif'
-import gentingAwanaskyWayImgSix from './assets/images/gentingAwanaskyWayImgSix.avif'
-import gentingAwanaskyWayImgSeven from './assets/images/gentingAwanaskyWayImgSeven.avif'
-import gentingAwanaskyWayImgEight from './assets/images/gentingAwanaskyWayImgEight.avif'
-import gentingAwanaskyWayImgNine from './assets/images/gentingAwanaskyWayImgNine.avif'
-import gentingAwanaskyWayImgTen from './assets/images/gentingAwanaskyWayImgTen.avif'
-
-//Third
-import gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgOne from './assets/images/gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgOne.avif'
-import gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgTwo from './assets/images/gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgTwo.avif'
-import gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgThree from './assets/images/gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgThree.avif'
-import gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgFour from './assets/images/gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgFour.avif'
-import gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgFive from './assets/images/gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgFive.avif'
-import gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgSix from './assets/images/gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgSix.avif'
-import gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgSeven from './assets/images/gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgSeven.avif'
-
-//Fourth
-import gentingAwanaSkyWayOnewaySkyworldOutdoorThemeParkTicketsImgOne from './assets/images/gentingAwanaSkyWayOnewaySkyworldOutdoorThemeParkTicketsImgOne.avif'
-import gentingAwanaSkyWayOnewaySkyworldOutdoorThemeParkTicketsImgTwo from './assets/images/gentingAwanaSkyWayOnewaySkyworldOutdoorThemeParkTicketsImgTwo.avif'
-import gentingAwanaSkyWayOnewaySkyworldOutdoorThemeParkTicketsImgThree from './assets/images/gentingAwanaSkyWayOnewaySkyworldOutdoorThemeParkTicketsImgThree.avif'
-import gentingAwanaSkyWayOnewaySkyworldOutdoorThemeParkTicketsImgFour from './assets/images/gentingAwanaSkyWayOnewaySkyworldOutdoorThemeParkTicketsImgFour.avif'
-
-//Fifth
-import gentingAwanaSkywayOnewaySkyworldOutdoorSkytropolisIndoorThemeParkImgOne from './assets/images/gentingAwanaSkywayOnewaySkyworldOutdoorSkytropolisIndoorThemeParkImgOne.avif'
-import gentingAwanaSkywayOnewaySkyworldOutdoorSkytropolisIndoorThemeParkImgTwo from './assets/images/gentingAwanaSkywayOnewaySkyworldOutdoorSkytropolisIndoorThemeParkImgTwo.avif'
-import gentingAwanaSkywayOnewaySkyworldOutdoorSkytropolisIndoorThemeParkImgThree from './assets/images/gentingAwanaSkywayOnewaySkyworldOutdoorSkytropolisIndoorThemeParkImgThree.avif'
-import gentingAwanaSkywayOnewaySkyworldOutdoorSkytropolisIndoorThemeParkImgFour from './assets/images/gentingAwanaSkywayOnewaySkyworldOutdoorSkytropolisIndoorThemeParkImgFour.avif'
-
-
-
 
 export const cardData = [
     {
@@ -58,53 +13,32 @@ export const cardData = [
         title:" Aquaria KLCC",
         desc:"Surpass the long queues and head straight to Kuala Lumpur’s Aquaria KLCC, listed among one of Asia's top five aquariums.",
         type:"bookTypeOne",
-        price: 45,
-        preference:[
-            {
-                id: uuidv4(),
-                prefType:"Malaysian Citizens",
-                prefPrice: 45,
-                prefDetails:[
-                    "Skip-the-line admission into Aquaria KLCC",
-                    "Access to all exhibits",
-                    "Valid only for Malaysian Citizens"
-                ]
+        pricing: {
+            malaysian:{
+                weekends:{
+                    adult:52,
+                    child:43,
+                    senior:43,
+                },
+                weekdays:{
+                    adult:48,
+                    child:39,
+                    senior:39,
+                }
             },
-            {
-                id: uuidv4(),
-                prefType:"Non Malaysian Citizens",
-                prefPrice: 61,
-                prefDetails:[
-                    "Skip-the-line admission into Aquaria KLCC",
-                    "Access to all exhibits",
-                    "Valid only for Non-Malaysian Citizens"
-                ]
-            },
-            {
-                id: uuidv4(),
-                prefType:"Family Discount Pack: Malaysian Citizen",
-                prefPrice: 150,
-                prefDetails:[
-                    "Valid for 2 adults and 2 children",
-                    "Skip-the-line admission into Aquaria KLCC",
-                    "Access to all exhibits",
-                    "Valid only for Malaysian Citizens"
-                ]
-            },
-            {
-                id: uuidv4(),
-                prefType:"Family Discount Pack: Non-Malaysian Citizen",
-                prefPrice: 200,
-                prefDetails:[
-                    "Valid for 2 adults and 2 children",
-                    "Skip-the-line admission into Aquaria KLCC",
-                    "Access to all exhibits",
-                    "Valid only for Non-Malaysian Citizens"
-                ]
-            },
-        ]
-        
-
+            nonMalaysian:{
+                weekends:{
+                    adult:68,
+                    child:58,
+                    senior:58,
+                },
+                weekdays:{
+                    adult:62,
+                    child:55,
+                    senior:55,
+                }
+            }
+        },
     },
     
 ]
@@ -172,39 +106,25 @@ export const preferenceData = [
     
     {
         id: uuidv4(),
-        title: "Combo: 1-Day Pass + Two-Way Standard Gondola Ride",
-        price: 171,
+        title: "Malaysian Citizens",
+        price: 49,
         details:[
-            "Access to Genting Awana SkyWay standard gondola", 
-            "Two-way ride",
-            "1-day admission to Genting SkyWorlds Theme Park"
+            "Skip-the-line admission into Aquaria KLCC", 
+            "Access to all exhibits",
+            "Valid only for Malaysian Citizens"
         ]
     },
+
     {
         id: uuidv4(),
-        title: "1-Day Pass",
-        price: 151,
-        details:["1-day admission to Genting SkyWorlds Theme Park"]
-    },
-    {
-        id: uuidv4(),
-        title: "1-Day Pass with Photo",
-        price: 179,
+        title: "Non Malaysian Citizens",
+        price: 49,
         details:[
-            "Photo opportunity",
-            "1-day admission to Genting SkyWorlds Theme Park"
+            "Skip-the-line admission into Aquaria KLCC", 
+            "Access to all exhibits",
+            "Valid only for Non Malaysian Citizens"
         ]
-    },
-    {
-        id: uuidv4(),
-        title: "Combo: Genting SkyWorlds Theme Park + Skytropolis Indoor Theme Park Tickets",
-        price: 215,
-        details:[
-            "Admission to Genting Skytropolis",
-            "Admission to Genting SkyWorlds",
-            "Complimentary up to 6 VQ reservations"
-        ]
-    }
+    },  
 ]
 
 
@@ -224,11 +144,6 @@ export const homeFAQ = [
     },
     {
         id: uuidv4(),
-        ques:"When is the Best Time to Visit Genting SkyWorlds?",
-        ans:"The park operates daily from 11:00 AM to 6:00 PM. For a more relaxed experience, consider avoiding the peak season from June to September. Optimal times are during the off-season from September to November and January to March, while April and May can be warmer."
-    },
-    {
-        id: uuidv4(),
         ques:"Does my 2 years old baby need to buy ticket to enter Aquaria KLCC?",
         ans:"No, 2 years old and below can enter for FREE."
     },
@@ -244,7 +159,7 @@ export const homeFAQ = [
     },
     {
         id: uuidv4(),
-        ques:". What is the last entry time for Aquaria KLCC?",
+        ques:"What is the last entry time for Aquaria KLCC?",
         ans:"7pm is the last entry time, everyday."
     },
     {
@@ -311,7 +226,7 @@ export const addQues = [
     {
         id: uuidv4(),
         ques:"Ticket Validity",
-        ans:["You may use the tickets within 30 days frompurchased date."]
+        ans:["You may use the tickets within 30 days from purchased date."]
     },
 ]
 

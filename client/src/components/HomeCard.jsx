@@ -55,7 +55,7 @@ const Calender = ({id}) =>{
 
 
 const HomeCard = ({data}) => {
-    const {image, id, title, desc, type, price} = data;
+    const {image, id, title, desc, type, pricing} = data;
     const dispatch = useDispatch()
     const navigate = useNavigate()
   return (
@@ -72,7 +72,7 @@ const HomeCard = ({data}) => {
             </div>
             <div className="cardBtnContainer">
                 <button onClick={() => {
-                    dispatch(choosingBooking({type, title}))
+                    dispatch(choosingBooking({type, title, pricing}))
                     return navigate("/date-confirm")
                 }} className='checkAvailability'>
                     Book Now
