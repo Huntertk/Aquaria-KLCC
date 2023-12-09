@@ -33,7 +33,7 @@ const DateBtn = ({setSelectedDate, setCalenderOpen,selectedDate, calenderOpen}) 
         <div className="dateBtnContainer">
            
            <button 
-           className={selectedDate.toString() == new Date(Date.now() + 1000*60*60*24)  ? "active" : ""}
+           className={selectedDate?.toString() == new Date(Date.now() + 1000*60*60*24)  ? "active" : ""}
            onClick={() => setSelectedDate(new Date(Date.now() + 1000*60*60*24))}
            >
             <span>
@@ -44,7 +44,7 @@ const DateBtn = ({setSelectedDate, setCalenderOpen,selectedDate, calenderOpen}) 
             </span>
             </button>
            <button  
-            className={selectedDate.toString() == new Date(Date.now() + 1000*60*60*24 * 2)  ? "active" : ""}
+            className={selectedDate?.toString() == new Date(Date.now() + 1000*60*60*24 * 2)  ? "active" : ""}
            onClick={() => setSelectedDate(new Date(Date.now() + 1000*60*60*24 * 2))}
            >
             <span>
@@ -55,7 +55,7 @@ const DateBtn = ({setSelectedDate, setCalenderOpen,selectedDate, calenderOpen}) 
             </span>
             </button>
            <button 
-            className={selectedDate.toString() == new Date(Date.now() + 1000*60*60*24 *3)  ? "active" : ""}
+            className={selectedDate?.toString() == new Date(Date.now() + 1000*60*60*24 *3)  ? "active" : ""}
            onClick={() => setSelectedDate(new Date(Date.now() + 1000*60*60*24 * 3))}
            >
             <span>
@@ -65,7 +65,7 @@ const DateBtn = ({setSelectedDate, setCalenderOpen,selectedDate, calenderOpen}) 
             {getDayName(new Date(Date.now() + 1000 * 60 *60 * 24 * 3))}
             </span>
             </button>
-            <button className={selectedDate.toString() == new Date(Date.now()+ 1000 * 60 *60 * 24 * 4)  ? "active" : ""}
+            <button className={selectedDate?.toString() == new Date(Date.now()+ 1000 * 60 *60 * 24 * 4)  ? "active" : ""}
            onClick={() => setSelectedDate(new Date(Date.now()+ 1000 * 60 *60 * 24 * 4))}
            >
             <span>
