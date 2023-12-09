@@ -20,8 +20,9 @@ const Cards = () => {
 const ThingsTodo = () => {
   return (
     <section className='HomeBuffetOptionMainContainer'>
-        <h1>Things To Do Genting SkyWorlds Theme Park</h1>
-        <p>Designed for movie enthusiasts, Genting SkyWorlds offers a captivating experience with rides and attractions inspired by beloved films. Enjoy a delightful time as the theme park provides a variety of engaging activities for visitors to explore and enjo</p>
+        <h1>Things To Do Aquaria KLCC   </h1>
+        <p>Introducing a Living Ocean exhibit that includes a 90-meter transparent
+            tunnel walkway, providing visitors with a firsthand encounter with over 7distinct species of sharks, including Sand Tiger sharks, Giant Stingrays, Marine turtles, and schools of other fishes.</p>
         <div className="cardMainContainer">
             <Cards />
         </div>

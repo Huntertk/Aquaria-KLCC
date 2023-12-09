@@ -19,8 +19,9 @@ const Cards = () => {
 const HomeHighlights = () => {
   return (
     <section className='HomeHighlightsMainContainer'>
-        <h1>Zones Inside Genting SkyWorlds Theme Park</h1>
-        <p>Genting SkyWorlds theme park has 26 rides in nine zones. Each zone is inspired by either a beloved movie or an adventure theme.</p>
+        <h1>Aquaria KLCC Highlights</h1>
+        <p>Aquaria KLCC is the top aquarium in South East Asia and Malaysia's
+            FIRST underground aquarium.</p>
         <div className="cardMainContainer">
             <Cards />
         </div>

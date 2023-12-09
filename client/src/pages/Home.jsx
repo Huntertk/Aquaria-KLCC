@@ -26,7 +26,6 @@ const Home = () => {
       <HomeTopContainer />
       <HomeCardContainer />
       <HomeWhyVisit />
-      {/* <HomWhatIsTheBest /> */}
       <HomeHighlights />
       <ThingsTodo />
       <HomeAdditionalInformation />

@@ -33,7 +33,7 @@ const QuestionContainer = ({data}) => {
 const HomeFaq = () => {
   return (
     <section className='homeFAQMainContainer'>
-        <h1>Frequently Asked Questions About Genting SkyWorlds Theme Park</h1>
+        <h1>Frequently Asked Questions About Aquaria KLCC</h1>
         <div className="questionMainContainer">
             {
                 homeFAQ.map((data) => {

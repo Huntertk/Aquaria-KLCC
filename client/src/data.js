@@ -117,58 +117,19 @@ export const cardData = [
 export const cardHighLightsDetails = [
     {
         id: uuidv4(),
-        image: "https://i.postimg.cc/cLwpMDTH/shop-studio-emporium-1.jpg",
-        title:"Studio Plaza",
-        desc:"Studio Plaza is a celebration of the cinema. You will come across your favorite movie characters as they are displayed in the Plaza, carved into the interiors. Explore the golden interiors, 360-degree Legends Cinema, diners, and retail stores to immerse yourself in a unique experience."
+        image: "https://i.postimg.cc/0yL0bG9J/Whats-App-Image-2023-12-07-at-09-42-15-2.jpg",
+        desc:"An advanced oceanarium, featuring more than 5,000 diverse aquatic andterrestrial creatures in their native environments, all housed within anexpansive 60,000 square-foot area."
     },
     {
         id: uuidv4(),
-        image: "https://i.postimg.cc/pdvg0D1B/Eagle-Mountain-Overall-View-1.jpg",
-        title:"Eagle Mountain",
-        desc:"Soar to new heights amidst the Eagle Mountain Zone, where thrilling rides await against the backdrop of breathtaking mountain scenery. Experience an adrenaline-pumping adventure with panoramic views."
+        image: "https://i.postimg.cc/N0m7Ty0C/Whats-App-Image-2023-12-07-at-09-42-15-1.jpg",
+        desc:"Introducing a Living Ocean exhibit that includes a 90-meter transparent tunnel walkway, providing visitors with a firsthand encounter with over 7distinct species of sharks, including Sand Tiger sharks, Giant Stingrays, Marine turtles, and schools of other fishes"
     },  
     {
         id: uuidv4(),
-        image: "https://i.postimg.cc/T358pM09/central-Park-Img.jpg",
-        title:"Central Park",
-        desc:"Discover the heart of entertainment in Central Park, where the iconic Lake of Dreams water fountain show captivates audiences. This zone hosts diverse outdoor events, creating the perfect atmosphere for creating lasting memories with family and friends."
-    },  
-    {
-        id: uuidv4(),
-        image: "https://i.postimg.cc/43QBCm26/Whats-App-Image-2023-11-30-at-3-43-34-PM.jpg",
-        title:"Andromeda Base Cosmic Journey",
-        desc:"Embark on a cosmic journey in the Andromeda Base, a space-themed zone that transports visitors beyond the stars. Engage with futuristic rides and interactive exhibits that make this zone an out-of-this-world experience."
-    },  
-    {
-        id: uuidv4(),
-        image:"https://i.postimg.cc/N0NP4ddM/restaurants-Img.jpg",
-        title:"Liberty Lane Cultural Celebration",
-        desc:"Step into Liberty Lane for a cultural celebration that pays homage to iconic landmarks. Experience the essence of freedom, creativity, and innovation, making it a zone that combines entertainment with a touch of historical richness."
-    },   
-    {
-        id: uuidv4(),
-        image: "https://i.postimg.cc/ThMVSxxL/Robots-Rivet-Town-Overview-1.jpg",
-        title:"Robots Revet Town Technology",
-        desc:"Immerse yourself in the futuristic world of Robots Rivet Town, a technological marvel showcasing cutting-edge innovations. Marvel at the seamless harmony between man and machine, making this zone a must-visit for tech enthusiasts."
-    },  
-    {
-        id: uuidv4(),
-        image: "https://i.postimg.cc/j524nvv5/Whats-App-Image-2023-11-30-at-3-47-24-PM.jpg",
-        title:"Rio",
-        desc:"Slip into the ultimate fun at Rio and explore the neighborhood of Santa Teresa while listening to Samba music. Make sure to take a spin at the colorful Rio Carnival Chaos teacup ride."
-    },  
-    {
-        id: uuidv4(),
-        image: "https://i.postimg.cc/VNDFN2qp/Whats-App-Image-2023-11-30-at-3-49-19-PM.jpg",
-        title:"Epic",
-        desc:"Step into the secret kingdom at Epic and Make a splash in the water as you tour the Moonhaven on Mub and Grub's boat ride. Enjoy the company of Nod, M.K, and Mandrake as you sail past the kingdom."
-    },  
-    {
-        id: uuidv4(),
-        image: "https://i.postimg.cc/wj82cCHF/ice-Age-Img.jpg",
-        title:"Ice Age",
-        desc:"Take a step back in time within the Ice Age Adventure zone, where larger-than-life attractions, thrilling rides, and immersive exhibits bring the ancient world to life. Prepare for an exhilarating journey through this frozen landscape."
-    },  
+        image: "https://i.postimg.cc/B6CTYdHx/Whats-App-Image-2023-12-07-at-09-42-16-1.jpg",
+        desc:"Embarking on a journey of exploration, visitors discover the rich biospherefound in Malaysia and beyond. The adventure unfolds through diverselandscapes, from jungle streams and mangroves to coastal shores andthe depths of the oceans."
+    },    
 ]
 
 
@@ -176,39 +137,33 @@ export const cardHighLightsDetails = [
 export const thingsTodo = [
     {
         id: uuidv4(),
-        title:"Rides & Attractions",
-        desc:"Explore Genting SkyWorlds' thrilling rides inspired by favorite movies. Meet characters from Ice Age, Epic, and Night at the Museum while enjoying rollercoasters and waterslides. With nine unique zones, each boasting multiple one-of-a-kind attractions, the park guarantees unforgettable experiences.",
-        image: "https://i.postimg.cc/Kc3sPrBG/rides-Attractions-Img.jpg"
+        title:"Feed the sea creatures",
+        desc:"Tourists at the aquarium can observe professional feedings for piranhas, chameleons, giant stingrays, eels, sharks, and various other marine species.",
+        image: "https://i.postimg.cc/j2Zh5Gjs/Picture.png"
     },
     {
         id: uuidv4(),
-        title:"Themed Areas",
-        desc:"Immerse yourself in diverse landscapes at Genting SkyWorlds, where you can swiftly transition from the vibrant streets of Rio to the lively cityscape of San Francisco. Traverse the rugged terrain of the Californian desert at Eagle Mountain or journey back in time to the prehistoric era of the Ice Age. The theme park's themed areas offer a quick escape to various captivating destinations.",
-        image: "https://i.postimg.cc/GppXHkb1/themed-Areas-Img-1.jpg"
+        title:"Take a leisurely walk through the Living Ocean exhibit",
+        desc:"Embark on a stroll through the 90-meter transparent tunnel at Aquaria KLCC, where you can observe sea turtles, sharks, eels, and other captivating marineanimals swimming around you.",
+        image: "https://i.postimg.cc/N0m7Ty0C/Whats-App-Image-2023-12-07-at-09-42-15-1.jpg"
     },
     {
         id: uuidv4(),
-        title:"Games & Activities",
-        desc:"Explore an array of exciting games and activities at Genting SkyWorlds theme park. Be captivated by the stunning water fountain show at Lake of Dreams in Central Park, immerse yourself in the festival vibe with the Sounds of Rio, or unleash your dance moves in the lively Samba Urbana. The park offers a diverse range of entertainment options to ensure a memorable and enjoyable visit.",
-        image: "https://i.postimg.cc/j5bYpgzh/games-Activities-Img.jpg"
+        title:"Greet the playful otters at the Otter Den",
+        desc:"This area is among the initial sections you'll discover at the marine park. Additionally, the otters are recognized as some of the most adorablelandanimals at Aquaria!",
+        image: "https://i.postimg.cc/9fRgkFQy/Otter.jpg"
     },
     {
         id: uuidv4(),
-        title:"Restaurants",
-        desc:"Within Genting SkyWorlds Theme Park, you'll discover numerous restaurants and food establishments scattered across its nine distinct zones. Indulge in the globally renowned Fish & Chips from Harry Ramsden located in Central Park, or opt for a local culinary experience with a selection of the finest local and Middle Eastern menus at Cosmic Cafe.",
-        image: "https://i.postimg.cc/N0NP4ddM/restaurants-Img.jpg"
+        title:"Witness the marvel of peculiar creatures in the Weird and Wonderful exhibition.",
+        desc:"Experience enchantment as you encounter bioluminescent fish and agiant octopus in this gallery illuminated by vibrant neon lights.",
+        image: "https://i.postimg.cc/3x6n25FN/Insect.jpg    "
     },
     {
         id: uuidv4(),
-        title:"Stores",
-        desc:"Explore the stores in all Genting SkyWorlds Theme Park zones to buy movie merchandise, collectibles, and galactic objects. Shop for toys in every movie-inspired zone, or pose for photo memorabilia in a photo kiosk.",
-        image: "https://i.postimg.cc/cLwpMDTH/shop-studio-emporium-1.jpg"
-    },
-    {
-        id: uuidv4(),
-        title:"Photo Booth",
-        desc:"Try out the Photo+ experience that offers stunning images using state-of-the-art facial recognition technology. You can capture your best reactions on rides or even ask for a slow-motion video to cherish the fun.",
-        image: "https://i.postimg.cc/jS41WxNy/photo-Booth-Img.jpg"
+        title:"Engage in a hands-on experience and get up close and personal with a variety of critters at the Touch Pool",
+        desc:"Explore the distinctive textures of marine animals, ranging frombamboosharks to horseshoe crabs, in this engaging exhibition.",
+        image: "https://i.postimg.cc/2jFcMtr9/pox5ytttbdetmuughdnv.jpg"
     },
 ]
 
@@ -259,13 +214,13 @@ export const preferenceData = [
 export const homeFAQ = [
     {
         id: uuidv4(),
-        ques:"Which Tickets are Ideal for Genting SkyWorlds?",
-        ans:"Choose between standard admission for unlimited access to all rides and attractions, or explore combo tickets for entry to Genting SkyWorlds and neighboring attractions like Genting Skytropolis and Genting Cable Car!"
+        ques:"Can I bring food inside Aquaria KLCC?",
+        ans:"No. Food and drinks is prohibited inside"
     },
     {
         id: uuidv4(),
-        ques:"Are Discounts Available on Genting SkyWorlds Tickets?",
-        ans:"Certainly! Enjoy discounts of up to 20% on admission tickets. Additionally, children under 110cm and seniors over 60 receive special reduced pricing."
+        ques:"Do I have to book a time slot to enter Aquaria KLCC?",
+        ans:"No, you may enter anytime within the operation hours."
     },
     {
         id: uuidv4(),
@@ -274,28 +229,33 @@ export const homeFAQ = [
     },
     {
         id: uuidv4(),
-        ques:"How Can I Reach Genting SkyWorlds Theme Park?",
-        ans:"Located in Genting Highlands, Pahang, an hour from Kuala Lumpur, use Google Maps for directions. Choose from options like the Genting Express bus, driving, or the convenient Genting Awana Cable Car, with SkyAvenue Station just minutes away on foot."
+        ques:"Does my 2 years old baby need to buy ticket to enter Aquaria KLCC?",
+        ans:"No, 2 years old and below can enter for FREE."
     },
     {
         id: uuidv4(),
-        ques:"How Long Should I Plan for Genting SkyWorlds?",
-        ans:"With 26 rides across nine zones, plan to spend 4-6 hours for a comprehensive experience covering the top attractions."
+        ques:"Can I bring stroller/wheelchair inside Aquaria KLCC?",
+        ans:"Yes, you may bring."
     },
     {
         id: uuidv4(),
-        ques:"Are Strollers and Wheelchairs Available at Genting SkyWorlds Theme Park?",
-        ans:"Certainly! Visitors can conveniently rent strollers and wheelchairs within the park."
+        ques:"How long can I stay inside Aquaria KLCC?",
+        ans:"You may stay as long as you want, no time limit."
     },
     {
         id: uuidv4(),
-        ques:"What are the Must-Try Rides & Attractions at Genting SkyWorlds?",
-        ans:"Explore a variety of exciting rides suitable for all ages. Highly recommended experiences include: Invasion of the Planet of the Apes Independence Day: Defiance ESD Global Defender Rio Carnaval Chaos Rivet Town Roller Terraform Tower Challenge"
+        ques:". What is the last entry time for Aquaria KLCC?",
+        ans:"7pm is the last entry time, everyday."
     },
     {
         id: uuidv4(),
-        ques:"If my child is more than 110cm, can i buy child ticket?",
-        ans:"No Child above 110cm will be considered as adult."
+        ques:"Can I bring camera inside the Aquaria KLCC?",
+        ans:"Yes you may bring but please love the marine life and never use your Flash as it might disturb them. Monopods and Tripods are not allowed."
+    },
+    {
+        id: uuidv4(),
+        ques:"How can I park my car if I bring my own vehicle?",
+        ans:"You may park it at Suria KLCC Basement parking."
     },
 ]
 
@@ -324,15 +284,7 @@ export const addQues = [
         id: uuidv4(),
         ques:"Operating Hours ?",
         ans:[
-            "Skyworld : 11am-6pm, Everyday(Closed every Tuesday except ", 
-        ]
-    },
-    {
-        id: uuidv4(),
-        ques:"Public/School Holiday",
-        ans:[
-            "Skytropolis: 2pm-9pm, Mon-Thu | 2pm-10pm, Fri-Sun", 
-            "Awana Skyway: 7am-11pm everyday", 
+            "10 am to 8pm, Opens everyday", 
         ]
     },
     {
@@ -340,7 +292,8 @@ export const addQues = [
         ques:"For Your Concern",
         ans:[
             "Adult age: 13 to 59 years old.",
-            "Child height more than 110cm, need to purchase Adult Ticket.",
+            "Child age is 3 to 12 years old",
+            "Senior Citizen age is 60 years and above."
         ]
     },
     {
@@ -354,6 +307,11 @@ export const addQues = [
         id: uuidv4(),
         ques:"Redemption Guide",
         ans:["Upon arrival, show your ticket/e-voucher at the counter"]
+    },
+    {
+        id: uuidv4(),
+        ques:"Ticket Validity",
+        ans:["You may use the tickets within 30 days frompurchased date."]
     },
 ]
 
