@@ -12,7 +12,33 @@ const bookingPlanSchema = new mongoose.Schema({
     },
     image:{
         type:[String]
-    }
+    },
+    pricing: {
+        malaysian:{
+            weekends:{
+                adult:{type:Number},
+                child:{type:Number},
+                senior:{type:Number},
+            },
+            weekdays:{
+                adult:{type:Number},
+                child:{type:Number},
+                senior:{type:Number},
+            }
+        },
+        nonMalaysian:{
+            weekends:{
+                adult:{type:Number},
+                child:{type:Number},
+                senior:{type:Number},
+            },
+            weekdays:{
+                adult:{type:Number},
+                child:{type:Number},
+                senior:{type:Number},
+            }
+        }
+    },
 }, {timestamps: true})
 
 const BookingPlan = mongoose.model('bookingPlan', bookingPlanSchema)

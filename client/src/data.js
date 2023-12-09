@@ -118,7 +118,7 @@ export const preferenceData = [
     {
         id: uuidv4(),
         title: "Non Malaysian Citizens",
-        price: 49,
+        price: 61,
         details:[
             "Skip-the-line admission into Aquaria KLCC", 
             "Access to all exhibits",

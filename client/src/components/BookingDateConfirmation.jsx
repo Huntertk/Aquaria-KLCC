@@ -31,21 +31,10 @@ const DateBtn = ({setSelectedDate, setCalenderOpen,selectedDate, calenderOpen}) 
     const date = new Date(Date.now()).getDate()
     return (
         <div className="dateBtnContainer">
-           <button className={selectedDate.toString() == new Date(Date.now())  ? "active" : ""}
-           onClick={() => setSelectedDate(new Date(Date.now()))}
-           disabled={getDayName(new Date(Date.now())) === 'Tue'}
-           >
-            <span>
-                {new Date(Date.now()).getDate()}
-            </span>
-            <span>
-                {getDayName(new Date(Date.now()))}
-            </span>
-           </button>
+           
            <button 
            className={selectedDate.toString() == new Date(Date.now() + 1000*60*60*24)  ? "active" : ""}
            onClick={() => setSelectedDate(new Date(Date.now() + 1000*60*60*24))}
-           disabled={getDayName(new Date(Date.now() + 1000 * 60 *60 *24 )) === 'Tue'}
            >
             <span>
             {new Date(Date.now() + 1000 * 60 * 60 * 24 ).getDate()}
@@ -57,7 +46,6 @@ const DateBtn = ({setSelectedDate, setCalenderOpen,selectedDate, calenderOpen}) 
            <button  
             className={selectedDate.toString() == new Date(Date.now() + 1000*60*60*24 * 2)  ? "active" : ""}
            onClick={() => setSelectedDate(new Date(Date.now() + 1000*60*60*24 * 2))}
-           disabled={getDayName(new Date(Date.now() + 1000 * 60 *60 * 24 * 2)) === 'Tue'}
            >
             <span>
             {new Date(Date.now() + 1000 * 60 * 60 * 24 *2  ).getDate()}
@@ -69,7 +57,6 @@ const DateBtn = ({setSelectedDate, setCalenderOpen,selectedDate, calenderOpen}) 
            <button 
             className={selectedDate.toString() == new Date(Date.now() + 1000*60*60*24 *3)  ? "active" : ""}
            onClick={() => setSelectedDate(new Date(Date.now() + 1000*60*60*24 * 3))}
-           disabled={getDayName(new Date(Date.now()+ 1000 * 60 *60 * 24 * 3)) === 'Tue'}
            >
             <span>
             {new Date(Date.now() + 1000 * 60 * 60 * 24 *3  ).getDate()}
@@ -78,6 +65,16 @@ const DateBtn = ({setSelectedDate, setCalenderOpen,selectedDate, calenderOpen}) 
             {getDayName(new Date(Date.now() + 1000 * 60 *60 * 24 * 3))}
             </span>
             </button>
+            <button className={selectedDate.toString() == new Date(Date.now()+ 1000 * 60 *60 * 24 * 4)  ? "active" : ""}
+           onClick={() => setSelectedDate(new Date(Date.now()+ 1000 * 60 *60 * 24 * 4))}
+           >
+            <span>
+                {new Date(Date.now()+ 1000 * 60 *60 * 24 * 4).getDate()}
+            </span>
+            <span>
+                {getDayName(new Date(Date.now()+ 1000 * 60 *60 * 24 * 4))}
+            </span>
+           </button>
            <button className={calenderOpen ? "moreDates active" : "moreDates"} onClick={() => setCalenderOpen(prev => !prev)}>More Dates</button>
         </div>
     )

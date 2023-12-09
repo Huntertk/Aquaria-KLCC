@@ -73,7 +73,7 @@ const Booking = () => {
     return (
         <section className='bookingMainContainer'>
             <div className="bookingWrapper">
-                <img className='banner' src={image} alt="" />
+                <img className='banner' src={"https://i.postimg.cc/0yL0bG9J/Whats-App-Image-2023-12-07-at-09-42-15-2.jpg"} alt="" />
                 <h1>Confirm and Pay</h1>
                 <div className="detailsWrapper">
                     <p className='bookingType'>{bookingTitle}</p>
