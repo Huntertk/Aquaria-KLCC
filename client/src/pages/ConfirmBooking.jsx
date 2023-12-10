@@ -27,8 +27,9 @@ const ConfirmBooking = () => {
         <h1>Booking Successfully</h1>
         <div className='bookingConfirmationDetails'>
           
+          <h3><span>Order ID : </span> <span className='orderId'>#{bookingId}</span></h3>
           <h3><span>Name : </span> <span>{name}</span></h3>
-          <h3><span>Order ID : </span> <span>#{bookingId}</span></h3>
+          <h3><span>Type : </span> <span>{pref}</span></h3>
           <h3><span>Total Amount: </span> <span>MYR {totalAmount}</span></h3>
           <h3><span>Date: </span> <span> {bookingDate}</span></h3>
           <h3>More Details Check Your Email</h3>

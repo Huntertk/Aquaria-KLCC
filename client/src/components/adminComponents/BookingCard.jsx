@@ -18,7 +18,6 @@ const BookingCard = (props) => {
         email,
         adultCount,
         childCount,
-        generalCount,
         seniorCount,
         bookingStatus,
         createdAt,
@@ -49,7 +48,7 @@ const BookingCard = (props) => {
         <span>Order ID: {_id}</span>
           <p>Date of Reservation : {bookingDate}</p>
           <p>Reservation-Type : {bookingTitle}</p>
-          { prefrence && <p>Reservation-Type : {prefrence}</p>}
+          { prefrence && <p>Preference-Type : {prefrence}</p>}
           <p>Booked By : {name}</p>
           <p>Contact : {mobileNumber}</p>
           <p>Email : {email}</p>
@@ -57,7 +56,6 @@ const BookingCard = (props) => {
           <div className="personCount">
             <p>Adult X {adultCount}</p>
             <p>Child X {childCount}</p>
-            <p>General X {generalCount}</p>
             <p>Senior X {seniorCount}</p>
           </div>
           <div className="bookingStatus">

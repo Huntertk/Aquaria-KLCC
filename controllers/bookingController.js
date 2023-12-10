@@ -173,7 +173,7 @@ export const successBooking = async (req, res, next) => {
                                                                         <table cellpadding="0" cellspacing="0" width="100%">
                                                                             <tbody>
                                                                                 <tr>
-                                                                                    <td align="center" class="esd-block-image" style="font-size: 0px;"><a target="_blank"><img class="adapt-img" src="https://i.postimg.cc/FRRVHmgF/homeMain.jpg" alt style="display: block;" width="455"></a></td>
+                                                                                    <td align="center" class="esd-block-image" style="font-size: 0px;"><a target="_blank"><img class="adapt-img" src="https://i.postimg.cc/0yL0bG9J/Whats-App-Image-2023-12-07-at-09-42-15-2.jpg" alt style="display: block;" width="455"></a></td>
                                                                                 </tr>
                                                                             </tbody>
                                                                         </table>
@@ -246,7 +246,7 @@ export const successBooking = async (req, res, next) => {
                                                                                         <table cellpadding="0" cellspacing="0" width="100%">
                                                                                             <tbody>
                                                                                                 <tr>
-                                                                                                    <td align="center" class="esd-block-image" style="font-size: 0px;"><a target="_blank"><img class="adapt-img" src="https://i.postimg.cc/KjpV8Jgw/genting-Awanasky-Way-Img-Six.jpg" alt style="display: block;" height="275"></a></td>
+                                                                                                    <td align="center" class="esd-block-image" style="font-size: 0px;"><a target="_blank"><img class="adapt-img" src="https://i.postimg.cc/8zC0hb8K/fit-1.jpg" alt style="display: block;" height="275"></a></td>
                                                                                                 </tr>
                                                                                             </tbody>
                                                                                         </table>
