@@ -12,7 +12,7 @@ const CardData = ({data}) => {
         <div className="prefrenceTabCard">
         <h1>{data.title}</h1>
         <div className="content">
-            <p>MYR {data.price}</p>
+            {/* <p>MYR {data.price}</p> */}
             <button onClick={() => {
                 dispatch(setPreference({pref: data.title}))
                 dispatch(countTotalBookingAmount({totalAmount: data.price}))
