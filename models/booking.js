@@ -7,10 +7,16 @@ const bookingSchema = new mongoose.Schema({
     childCount:{
         type: Number,
     },
-    generalCount:{
+    seniorCount:{
         type: Number,
     },
-    seniorCount:{
+    adultTotal:{
+        type:Number,
+    },
+    childTotal:{
+        type: Number,
+    },
+    seniorTotal:{
         type: Number,
     },
     totalAmount:{

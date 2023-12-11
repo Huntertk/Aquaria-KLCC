@@ -77,7 +77,7 @@ const bookingSlice = createSlice({
             //First
             if(state.type === 'bookTypeOne'){
                 if(state.pref === "Malaysian Citizens") {
-                    if(state.bookingDay === 'Sun' || state.bookingDay === 'Sat' || state.bookingDay === 'Fri') {
+                    if(state.bookingDay === 'Sun' || state.bookingDay === 'Sat') {
                         state.adultTotal = state.adultCount *  state.pricing.malaysian.weekends.adult
                         return 
                     }else{
@@ -87,7 +87,7 @@ const bookingSlice = createSlice({
                     }
                 } else if(state.pref === "Non Malaysian Citizens"
                 ){
-                    if(state.bookingDay === 'Sun' || state.bookingDay === 'Sat' || state.bookingDay === 'Fri') {
+                    if(state.bookingDay === 'Sun' || state.bookingDay === 'Sat') {
                         state.adultTotal = state.adultCount *  state.pricing.nonMalaysian.weekends.adult
                         return 
                     }else{
@@ -102,7 +102,7 @@ const bookingSlice = createSlice({
             //First
             if(state.type === 'bookTypeOne'){
                 if(state.pref === "Malaysian Citizens") {
-                    if(state.bookingDay === 'Sun' || state.bookingDay === 'Sat' || state.bookingDay === 'Fri') {
+                    if(state.bookingDay === 'Sun' || state.bookingDay === 'Sat') {
                         state.childTotal = state.childCount *  state.pricing.malaysian.weekends.child
                         return 
                     }else{
@@ -112,7 +112,7 @@ const bookingSlice = createSlice({
                     }
                 } else if(state.pref === "Non Malaysian Citizens"
                 ){
-                    if(state.bookingDay === 'Sun' || state.bookingDay === 'Sat' || state.bookingDay === 'Fri') {
+                    if(state.bookingDay === 'Sun' || state.bookingDay === 'Sat') {
                         state.childTotal = state.childCount *  state.pricing.nonMalaysian.weekends.child
                         return 
                     }else{
@@ -127,7 +127,7 @@ const bookingSlice = createSlice({
             //First
             if(state.type === 'bookTypeOne'){
                 if(state.pref === "Malaysian Citizens") {
-                    if(state.bookingDay === 'Sun' || state.bookingDay === 'Sat' || state.bookingDay === 'Fri') {
+                    if(state.bookingDay === 'Sun' || state.bookingDay === 'Sat') {
                         state.seniorTotal = state.seniorCount *  state.pricing.malaysian.weekends.senior
                         return 
                     }else{
@@ -137,7 +137,7 @@ const bookingSlice = createSlice({
                     }
                 } else if(state.pref === "Non Malaysian Citizens"
                 ){
-                    if(state.bookingDay === 'Sun' || state.bookingDay === 'Sat' || state.bookingDay === 'Fri') {
+                    if(state.bookingDay === 'Sun' || state.bookingDay === 'Sat'){
                         state.seniorTotal = state.seniorCount *  state.pricing.nonMalaysian.weekends.senior
                         return 
                     }else{
