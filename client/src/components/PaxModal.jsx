@@ -21,6 +21,7 @@ import {
     generalCountDecrease,
     generalTotalAmount,
 } from '../features/booking/bookingSlice';
+import { format } from 'date-fns';
 
 
 
@@ -153,7 +154,7 @@ const PaxModal = ({selectedDate}) => {
             </div>
                
         <div className="dateContainer">
-                <p>{bookingDate}  </p> 
+                <p>{format(new Date(bookingDate), 'PPP')} </p> 
                 {
                     totalAmount > 0 &&
                     <Link to="/booking"><button>Next</button></Link> 

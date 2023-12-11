@@ -46,7 +46,7 @@ const BookingCard = (props) => {
       </div>
         <span>Booking ID: #{bookingId}</span>
         <span>Order ID: {_id}</span>
-          <p>Date of Reservation : {bookingDate}</p>
+          <p>Date of Reservation : {format(new Date(bookingDate), 'PPP')}</p>
           <p>Reservation-Type : {bookingTitle}</p>
           { prefrence && <p>Preference-Type : {prefrence}</p>}
           <p>Booked By : {name}</p>

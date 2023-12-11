@@ -10,6 +10,7 @@ import { v4 as uuidv4 } from 'uuid';
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 import '../styles/booking.scss'
+import { format } from 'date-fns';
 
 const Booking = () => {
     const navigate = useNavigate()
@@ -76,7 +77,7 @@ const Booking = () => {
                     <p className='bookingType'>{bookingTitle}</p>
                     {pref && <p className='bookingType'>{pref}</p>}
                     <div className="topContainer">
-                        <p>{bookingDate}</p>
+                        <p>{format(new Date(bookingDate), 'PPP')}</p>
                         <Link to="/date-confirm"><BiEditAlt /></Link>
                     </div>
 
