@@ -206,7 +206,8 @@ export const successBooking = async (req, res, next) => {
                                                                                 <tr>
                                                                                     <td align="center" class="esd-block-text" bgcolor="#ffffff">
                                                                                         <h2 style="line-height: 150%; color: #f26823; font-size: 16px;">BOOKING ID #${req.body.bookingId}</h2>
-                                                                                        <p style="line-height: 150%; color: #f26823; font-size: 16px;"><strong>Date of Reservation&nbsp;&nbsp;${req.body.bookingDate}</strong></p>
+
+                                                                                        <p style="line-height: 150%; color: #f26823; font-size: 16px;"><strong>Date of Reservation&nbsp;&nbsp;${req.body.bookingDate.substring(0, 15)}</strong></p>
                                                                                     </td>
                                                                                 </tr>
                                                                                 <tr>

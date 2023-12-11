@@ -72,7 +72,6 @@ const PaxModal = ({selectedDate}) => {
         generalCount,
         generalTotal
     } = useSelector((store) => store.booking)
-
     const dispatch = useDispatch()
 
     useEffect(() => {
