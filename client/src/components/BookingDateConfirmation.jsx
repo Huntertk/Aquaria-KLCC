@@ -85,7 +85,7 @@ const BookingDateConfirmation = () => {
     const {isPaxModal, bookingDate, type, pref} = useSelector(store => store.booking)
         const [selectedDate, setSelectedDate] = useState("")
         const [calenderOpen, setCalenderOpen] = useState(false)
-
+        // console.log(selectedDate?.toString()?.split(' ')[0]);
         const disabledDays = [
             
           ];
@@ -121,7 +121,7 @@ const BookingDateConfirmation = () => {
             />
             </div>
             {
-                selectedDate && type === 'bookTypeOne' && <PreferenceTour /> 
+                selectedDate && type === 'bookTypeOne' && <PreferenceTour day={selectedDate?.toString()?.split(' ')[0]} /> 
             }
             {/* <PreferenceTour /> */}
             <div className="selectedDate">
