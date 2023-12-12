@@ -247,7 +247,7 @@ export const successBooking = async (req, res, next) => {
                                                                                         <table cellpadding="0" cellspacing="0" width="100%">
                                                                                             <tbody>
                                                                                                 <tr>
-                                                                                                    <td align="center" class="esd-block-image" style="font-size: 0px;"><a target="_blank"><img class="adapt-img" src="https://i.postimg.cc/8zC0hb8K/fit-1.jpg" alt style="display: block;" height="275"></a></td>
+                                                                                                    <td align="center" class="esd-block-image" style="font-size: 0px;"><a target="_blank"><img class="adapt-img" src="https://i.postimg.cc/8zC0hb8K/fit-1.jpg" alt style="display: block;" height="175"></a></td>
                                                                                                 </tr>
                                                                                             </tbody>
                                                                                         </table>
