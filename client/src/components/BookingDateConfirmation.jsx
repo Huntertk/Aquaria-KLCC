@@ -82,7 +82,7 @@ const DateBtn = ({setSelectedDate, setCalenderOpen,selectedDate, calenderOpen}) 
 
 const BookingDateConfirmation = () => {
     const dispatch = useDispatch()
-    const {isPaxModal, bookingDate, type, pref} = useSelector(store => store.booking)
+    const {isPaxModal, bookingDate, type, pref, prefrenceOpt} = useSelector(store => store.booking)
         const [selectedDate, setSelectedDate] = useState("")
         const [calenderOpen, setCalenderOpen] = useState(false)
         // console.log(selectedDate?.toString()?.split(' ')[0]);
@@ -121,7 +121,7 @@ const BookingDateConfirmation = () => {
             />
             </div>
             {
-                selectedDate && type === 'bookTypeOne' && <PreferenceTour day={selectedDate?.toString()?.split(' ')[0]} /> 
+                selectedDate && type === 'bookTypeOne' && <PreferenceTour data={prefrenceOpt} day={selectedDate?.toString()?.split(' ')[0]} selectedDate={selectedDate} /> 
             }
             {/* <PreferenceTour /> */}
             <div className="selectedDate">

@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { setBookingDetailsFromLocalStorage, getBookingDetailsFromLocalStorage } from "../../utils/localStorage";
 import { toast } from 'react-toastify';
+import { publicHolidays } from "../../data";
 
 
 const initialState = {
@@ -10,8 +11,6 @@ const initialState = {
     adultTotal: 0,
     childTotal: 0,
     seniorTotal: 0,
-    generalCount:0,
-    generalTotal:0,
     totalAmount: 0,
     isPaxModal: false,
     loading: false,
@@ -28,7 +27,7 @@ const initialState = {
     bookingId:"",
     pref:"",
     bookingTitle:"",
-    pricing:{}
+    prefrenceOpt:[]
 }
 
 
@@ -42,25 +41,11 @@ const bookingSlice = createSlice({
         adultCountDecrease : (state, action) => {
             state.adultCount = state.adultCount - 1
         },
-
-
-        generalCountIncrease : (state, action) => {
-            state.generalCount = state.generalCount + 1
-        },
-        generalCountDecrease : (state, action) => {
-            state.generalCount = state.generalCount - 1
-        },
         childCountIncrease : (state, action) => {
             state.childCount = state.childCount + 1
         },
         childCountDecrease : (state, action) => {
             state.childCount = state.childCount - 1
-        },
-        infantCountIncrease : (state, action) => {
-            state.infantCount = state.infantCount + 1
-        },
-        infantCountDecrease : (state, action) => {
-            state.infantCount = state.infantCount - 1
         },
         seniorCountIncrease : (state, action) => {
             state.seniorCount = state.seniorCount + 1
@@ -73,96 +58,93 @@ const bookingSlice = createSlice({
             state.generalTotal = state.generalCount * 75
         },
         adultTotalAmount: (state) => {
-            // 
-            //First
+            const publicHoliday = publicHolidays.includes(state.bookingDate);
+
             if(state.type === 'bookTypeOne'){
-                if(state.pref === "Malaysian Citizens") {
-                    if(state.bookingDay === 'Sun' || state.bookingDay === 'Sat') {
-                        state.adultTotal = state.adultCount *  state.pricing.malaysian.weekends.adult
+                if(state.pref === "Malaysian") {
+                    if(state.bookingDay == 'Sat' || state.bookingDay === 'Sun'){
+                        state.adultTotal = state.adultCount *  state.prefrenceOpt[0].price.weekend.adult
                         return 
-                    }else{
-                        state.adultTotal = state.adultCount *  state.pricing.malaysian.weekdays.adult
+                    } else if(publicHoliday){
+                        state.adultTotal = state.adultCount *  state.prefrenceOpt[0].price.weekend.adult
                         return 
-
                     }
-                } else if(state.pref === "Non Malaysian Citizens"
-                ){
-                    if(state.bookingDay === 'Sun' || state.bookingDay === 'Sat') {
-                        state.adultTotal = state.adultCount *  state.pricing.nonMalaysian.weekends.adult
+                    state.adultTotal = state.adultCount *  state.prefrenceOpt[0].price.weekday.adult
+                }  else if(state.pref === 'Non-Malaysian') {
+                    if(state.bookingDay == 'Sat' || state.bookingDay === 'Sun'){
+                        state.adultTotal = state.adultCount *  state.prefrenceOpt[1].price.weekend.adult
                         return 
-                    }else{
-                        state.adultTotal = state.adultCount *  state.pricing.nonMalaysian.weekdays.adult
+                    } else if(publicHoliday){
+                        state.adultTotal = state.adultCount *  state.prefrenceOpt[1].price.weekend.adult
                         return 
-
-                    } 
+                    }
+                    state.adultTotal = state.adultCount *  state.prefrenceOpt[1].price.weekday.adult
                 }
-            } 
+            }
         },
         childTotalAmount: (state) => {
-            //First
+            const publicHoliday = publicHolidays.includes(state.bookingDate);
+
             if(state.type === 'bookTypeOne'){
-                if(state.pref === "Malaysian Citizens") {
-                    if(state.bookingDay === 'Sun' || state.bookingDay === 'Sat') {
-                        state.childTotal = state.childCount *  state.pricing.malaysian.weekends.child
+                if(state.pref === "Malaysian") {
+                    if(state.bookingDay == 'Sat' || state.bookingDay === 'Sun'){
+                        state.childTotal = state.childCount *  state.prefrenceOpt[0].price.weekend.child
                         return 
-                    }else{
-                        state.childTotal = state.childCount *  state.pricing.malaysian.weekdays.child
+                    } else if(publicHoliday){
+                        state.childTotal = state.childCount *  state.prefrenceOpt[0].price.weekend.child
                         return 
-
                     }
-                } else if(state.pref === "Non Malaysian Citizens"
-                ){
-                    if(state.bookingDay === 'Sun' || state.bookingDay === 'Sat') {
-                        state.childTotal = state.childCount *  state.pricing.nonMalaysian.weekends.child
+                    state.childTotal = state.childCount *  state.prefrenceOpt[0].price.weekday.child
+                }  else if(state.pref === 'Non-Malaysian') {
+                    if(state.bookingDay == 'Sat' || state.bookingDay === 'Sun'){
+                        state.childTotal = state.childCount *  state.prefrenceOpt[1].price.weekend.child
                         return 
-                    }else{
-                        state.childTotal = state.childCount *  state.pricing.nonMalaysian.weekdays.child
+                    } else if(publicHoliday){
+                        state.childTotal = state.childCount *  state.prefrenceOpt[1].price.weekend.child
                         return 
-
-                    } 
+                    }
+                    state.childTotal = state.childCount *  state.prefrenceOpt[1].price.weekday.child
                 }
+
             } 
         },
         seniorTotalAmount: (state) => {
-            //First
+            const publicHoliday = publicHolidays.includes(state.bookingDate);
+
             if(state.type === 'bookTypeOne'){
-                if(state.pref === "Malaysian Citizens") {
-                    if(state.bookingDay === 'Sun' || state.bookingDay === 'Sat') {
-                        state.seniorTotal = state.seniorCount *  state.pricing.malaysian.weekends.senior
+                if(state.pref === "Malaysian") {
+                    if(state.bookingDay == 'Sat' || state.bookingDay === 'Sun'){
+                        state.seniorTotal = state.seniorCount *  state.prefrenceOpt[0].price.weekend.senior
                         return 
-                    }else{
-                        state.seniorTotal = state.seniorCount *  state.pricing.malaysian.weekdays.senior
+                    } else if(publicHoliday){
+                        state.seniorTotal = state.seniorCount *  state.prefrenceOpt[0].price.weekend.senior
                         return 
-
                     }
-                } else if(state.pref === "Non Malaysian Citizens"
-                ){
-                    if(state.bookingDay === 'Sun' || state.bookingDay === 'Sat'){
-                        state.seniorTotal = state.seniorCount *  state.pricing.nonMalaysian.weekends.senior
+                    state.seniorTotal = state.seniorCount *  state.prefrenceOpt[0].price.weekday.senior
+                } else if(state.pref === 'Non-Malaysian') {
+                    if(state.bookingDay == 'Sat' || state.bookingDay === 'Sun'){
+                        state.seniorTotal = state.seniorCount *  state.prefrenceOpt[1].price.weekend.senior
                         return 
-                    }else{
-                        state.seniorTotal = state.seniorCount *  state.pricing.nonMalaysian.weekdays.senior
+                    } else if(publicHoliday){
+                        state.seniorTotal = state.seniorCount *  state.prefrenceOpt[1].price.weekend.senior
                         return 
-
-                    } 
+                    }
+                    state.seniorTotal = state.seniorCount *  state.prefrenceOpt[1].price.weekday.senior
                 }
-            } 
+            }
         },
 
         setPreference: (state, action) => {
             state.pref = action.payload.pref
-            // setBookingDetailsFromLocalStorage(state)
         },
         countTotalBookingAmount: (state, action) => {
-            state.totalAmount = state.adultTotal + state.childTotal + state.seniorTotal + state.generalTotal
+            state.totalAmount = state.adultTotal + state.childTotal + state.seniorTotal
             state.bookingResponse = ""
-            // setBookingDetailsFromLocalStorage(state)
         },
         setBookingDate: (state, action) => {
             state.bookingDate = action.payload.selectedBookingDate
             state.bookingResponse = ""
             state.bookingDay = action.payload.selectedDay.split(' ')[0]
-            // setBookingDetailsFromLocalStorage(state)
         },
         openPaxModel: (state) => {
             state.isPaxModal = true
@@ -202,7 +184,7 @@ const bookingSlice = createSlice({
         choosingBooking: (state, action) => {
             state.type = action.payload.type
             state.bookingTitle = action.payload.title
-            state.pricing = action.payload.pricing
+            state.prefrenceOpt = action.payload.preference
             // setBookingDetailsFromLocalStorage(state)
         },
         settingBookingResponse: (state, action) => {

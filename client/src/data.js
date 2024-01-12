@@ -13,32 +13,46 @@ export const cardData = [
         title:" Aquaria KLCC",
         desc:"Surpass the long queues and head straight to Kuala Lumpur’s Aquaria KLCC, listed among one of Asia's top five aquariums.",
         type:"bookTypeOne",
-        pricing: {
-            malaysian:{
-                weekends:{
-                    adult:52,
-                    child:43,
-                    senior:43,
+        preference:[
+            {
+                title:"Malaysian",
+                price:{
+                    weekend:{
+
+                        adult:52,
+                        child:43,
+                        senior:43,
+                    },
+                    weekday:{
+                        adult:48,
+                        child:39,
+                        senior:39,
+                    }
                 },
-                weekdays:{
-                    adult:48,
-                    child:39,
-                    senior:39,
-                }
+                details:[
+                    "Valid only for Malaysian Citizens"
+                ]
             },
-            nonMalaysian:{
-                weekends:{
-                    adult:68,
-                    child:58,
-                    senior:58,
+            {
+                title:"Non-Malaysian",
+                price:{
+                    weekend:{
+
+                        adult:68,
+                        child:58,
+                        senior:58,
+                    },
+                    weekday:{
+                        adult:62,
+                        child:55,
+                        senior:55,
+                    }
                 },
-                weekdays:{
-                    adult:62,
-                    child:55,
-                    senior:55,
-                }
+                details:[
+                    "Valid only for Non Malaysian Citizens"
+                ]
             }
-        },
+        ]
     },
     
 ]
@@ -204,7 +218,7 @@ export const addQues = [
     },
     {
         id: uuidv4(),
-        ques:"For Your Concern",
+        ques:"Child Policy",
         ans:[
             "Adult age: 13 to 59 years old.",
             "Child age is 3 to 12 years old",
@@ -311,4 +325,10 @@ export const termsandconditiondata = [
         title: "Arbitration",
         list:["Any legal controversy will be settled by binding arbitration. Each party bears one-half of arbitration fees."]
     },
+]
+
+export const publicHolidays = [
+    "January 25th, 2024",
+    "February 1st, 2024",
+    "February 12th, 2024",
 ]

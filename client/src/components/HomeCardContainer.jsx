@@ -20,12 +20,12 @@ const HomeCardContainer = () => {
     }
   }
 
-
+  
   useEffect(() => {
     getCardData()
     dispatch(initialRender())
   },[])
-
+  
   if(!cardData){
     return <LoadingSpinner />
   }
