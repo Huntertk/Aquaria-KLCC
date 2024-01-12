@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { setBookingDetailsFromLocalStorage, getBookingDetailsFromLocalStorage } from "../../utils/localStorage";
 import { toast } from 'react-toastify';
 import { publicHolidays } from "../../data";
+import { format } from "date-fns";
 
 
 const initialState = {
@@ -58,7 +59,7 @@ const bookingSlice = createSlice({
             state.generalTotal = state.generalCount * 75
         },
         adultTotalAmount: (state) => {
-            const publicHoliday = publicHolidays.includes(state.bookingDate);
+            const publicHoliday = publicHolidays.includes(format(new Date(state.bookingDate), "PPP"));
 
             if(state.type === 'bookTypeOne'){
                 if(state.pref === "Malaysian") {
@@ -83,7 +84,7 @@ const bookingSlice = createSlice({
             }
         },
         childTotalAmount: (state) => {
-            const publicHoliday = publicHolidays.includes(state.bookingDate);
+            const publicHoliday = publicHolidays.includes(format(new Date(state.bookingDate), "PPP"));
 
             if(state.type === 'bookTypeOne'){
                 if(state.pref === "Malaysian") {
@@ -109,7 +110,7 @@ const bookingSlice = createSlice({
             } 
         },
         seniorTotalAmount: (state) => {
-            const publicHoliday = publicHolidays.includes(state.bookingDate);
+            const publicHoliday = publicHolidays.includes(format(new Date(state.bookingDate), "PPP"));
 
             if(state.type === 'bookTypeOne'){
                 if(state.pref === "Malaysian") {
